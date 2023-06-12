@@ -1,3 +1,5 @@
+#![cfg_attr(not(test), no_std)]
+
 #[cfg(target_arch = "aarch64")]
 use aarch64::inet_aton_impl;
 #[cfg(any(target_arch = "x86", target_arch = "x86_64"))]

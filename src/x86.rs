@@ -1,7 +1,7 @@
 #![cfg(any(target_arch = "x86", target_arch = "x86_64"))]
 
 use crate::pattern::{PATTERNS, PATTERNS_ID};
-use std::arch::x86_64::*;
+use core::arch::x86_64::*;
 
 #[target_feature(enable = "sse4.1")]
 pub(crate) unsafe fn inet_aton_impl(str: &[u8]) -> Option<u32> {
